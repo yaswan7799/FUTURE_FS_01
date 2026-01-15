@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yaswanth Reddy | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="logo">YR</div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- 🌙 THEME TOGGLE BUTTON (STEP 1) -->
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+</nav>
+
+
+<section id="home" class="hero">
+    <div class="profile-pic">
+  <img src="image.jpeg" alt="Yaswanth Reddy">
+</div>
+
+  <h1>Yaswanth Reddy</h1>
+  <h3 class="typing"></h3>
+  <p>Full Stack Developer building scalable frontend & backend systems</p>
+  <button onclick="scrollToSection('contact')">Get In Touch</button>
+</section>
+
+<section id="about" class="glass reveal">
+  <h2>About Me</h2>
+  <p>
+    I am a Full Stack Developer passionate about creating high-quality web
+    applications with modern UI, clean architecture, and scalable backend logic.
+    I enjoy solving problems and turning ideas into real-world products.
+  </p>
+</section>
+
+<section id="education" class="glass reveal">
+  <h2>Education</h2>
+
+  <div class="education-card">
+    <h3>Bachelor of Technology (B.Tech)</h3>
+    <p class="edu-branch">Computer Science & Engineering</p>
+  </div>
+</section>
+
+
+<!-- SKILLS (REVAMPED) -->
+<section id="skills" class="glass reveal">
+  <h2>Tech Stack</h2>
+  <div class="skills-grid">
+    <div class="skill-card">HTML5</div>
+    <div class="skill-card">CSS3</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">React</div>
+    <div class="skill-card">Node.js</div>
+    <div class="skill-card">Express.js</div>
+    <div class="skill-card">MongoDB</div>
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">REST APIs</div>
+    <div class="skill-card">Git & GitHub</div>
+    <div class="skill-card">System Design</div>
+    <div class="skill-card">DSA</div>
+  </div>
+</section>
+
+<section id="projects" class="glass reveal">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">Full Stack Portfolio</div>
+    <div class="card">E-Commerce Platform</div>
+    <div class="card">Real-Time Chat App</div>
+    <div class="card">Task Management System</div>
+  </div>
+</section>
+
+<section id="contact" class="glass contact reveal">
+  <h2>Let’s Build Something Great</h2>
+  <p class="contact-sub">
+    I’m open to internships, full-time roles, and freelance opportunities.
+    If you like my work, let’s connect and discuss ideas.
+  </p>
+
+  <!-- CONTACT FORM -->
+  <form class="contact-form" id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- CENTER ACTIONS -->
+<div class="contact-actions">
+  <p id="successMsg" class="success-msg">
+    ✅ Message sent successfully! I’ll get back to you soon.
+  </p>
+
+  <a href="https://www.linkedin.com/in/yaradla-yaswanth-reddy-677b1b312/"
+    target="_blank"
+    class="linkedin-btn"
+  >
+    Connect on LinkedIn
+  </a>
+</div>
+
+
+  <div class="availability">
+    <span class="pulse"></span> Currently Open to Opportunities
+  </div>
+</section>
+
+
+<footer>
+  © 2026 Yaswanth Reddy | Full Stack Developer
+</footer>
+
+<script src="javascript.js"></script>
+
+<button class="floating-contact" onclick="scrollToSection('contact')">
+  💬
+  <span class="tooltip">Contact Me</span>
+</button>
+
+
+</body>
+</html>

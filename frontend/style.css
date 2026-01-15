@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(270deg, #22d3ee, #a855f7, #ec4899);
+  background-size: 600% 600%;
+  animation: gradient 12s ease infinite;
+  color: white;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+section {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero h3 {
+  margin: 15px 0;
+  font-size: 24px;
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.glass {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+}
+
+/* 🔥 SKILLS BOX DESIGN */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 18px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.45);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px #22d3ee;
+}
+
+/* PROJECT CARDS */
+.projects {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* 🔥 GET IN TOUCH */
+.contact-sub {
+  margin: 20px 0 40px;
+  opacity: 0.9;
+}
+
+.linkedin-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #22d3ee, #a855f7);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s;
+
+  margin-top: 8px;   /* ✅ reduce gap above */
+}
+
+
+.linkedin-btn:hover {
+  transform: scale(1.1);
+}
+
+.availability {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.pulse {
+  height: 12px;
+  width: 12px;
+  background: #22d3ee;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,211,238,0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(34,211,238,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,211,238,0); }
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.8;
+}
+/* 🔵 PROFILE PHOTO CIRCLE */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
+  box-shadow: 0 0 30px rgba(34,211,238,0.8);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: black;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+  transition: 0.3s;
+}
+/* CONTACT FORM */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+#contact {
+  scroll-margin-top: 120px;
+}
+
+
+.contact-form button {
+  background: linear-gradient(90deg, #22d3ee, #a855f7);
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+
+  margin-bottom: 6px;   /* ✅ controls gap below Send button */
+}
+
+/* Floating Contact Button */
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+
+  /* ✅ CENTER THE ICON PROPERLY */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: white;
+  font-size: 32px;        /* 💬 size */
+  cursor: pointer;
+  
+  animation: float 2.5s ease-in-out infinite,
+             pulseGlow 2.5s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.7);
+  z-index: 999;
+}
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+  }
+}
+
+
+.floating-contact:hover {
+  transform: scale(1.1);
+}
+
+
+.floating-contact:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip text */
+.floating-contact .tooltip {
+  position: absolute;
+  bottom: 65px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* Show tooltip on hover */
+.floating-contact:hover .tooltip {
+  opacity: 1;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Success Message */
+.success-msg {
+  margin: 6px auto;
+  padding: 8px 14px;
+  text-align: center;
+
+  color: #ffffff;                     /* ✅ readable text */
+  background: rgba(0, 0, 0, 0.35);    /* ✅ contrast layer */
+  border-radius: 12px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease;
+}
+
+.success-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Force true center alignment */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light nav a,
+body.light .logo {
+  color: #0f172a;
+}
+
+body.light .glass {
+  background: rgba(0,0,0,0.05);
+}
+
+body.light .skill-card,
+body.light .card {
+  background: rgba(0,0,0,0.08);
+}
+
+body.light .theme-toggle {
+  background: rgba(0,0,0,0.1);
+  color: #0f172a;
+}
+
+/* EDUCATION SECTION */
+.education-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.education-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.edu-branch {
+  font-size: 16px;
+  color: #a5f3fc;
+  margin-bottom: 6px;
+}
+
+.edu-college {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.edu-year {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
