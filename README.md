@@ -7,12 +7,6 @@ This project includes a fully working **contact form** that stores messages in M
 
 ---
 
-## 🚀 Live Demo
-🔗 https://your-name.netlify.app  
-(Replace with your live link after deployment)
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
